@@ -16,19 +16,19 @@ This is the Open Source Project for Crossout Market found here: <http://crossout
 
 Screenshot of the main page:
 
-![Crossout Market](http://i.imgur.com/a9ovo2O.png)
+![Crossout Market](images/crossout-market.png)
 
 Example of the Clarinet Tow item page:
 
-![Clarinet Tow Chart](http://i.imgur.com/pvOwYtU.png)
+![Clarinet Tow Chart](images/clarinet-tow-chart.png)
 
 Example of recipe view:
 
-![Armored track recipe](http://i.imgur.com/XwO7R2C.png)
+![Armored track recipe](images/armored-track-recipe.png)
 
 Example of stats view:
 
-![Hurricane stats](http://i.imgur.com/9CfARj3.png)
+![Hurricane stats](images/hurricane-stats.png)
 
 Contributing
 ===
@@ -38,12 +38,49 @@ Contributing
 You will need a few things to setup first:
 
 * MySQL Server 9.x
-* Visual Studio with .Net 4.8 installed.
-* Some experience with Web Development.
+* Visual Studio with .Net 4.8 installed
+* Some experience with Web Development
 
-Start with Forking the repo and import the MySQL from /Schema/crossout_structure_and_data_no_market.sql on your machine.
+## Setup the MySQL server
 
-Then create the settings file in %appdata%/CrossoutWeb/WebSettings.json or start the project once since the file is created then and edit the file.
+Windows users can install [WampServer]<https://www.wampserver.com/en/>, which already includes a `MySQL` server and `phpMyAdmin` (web UI to manage the DB).
+
+Launch the server and wait for its initialization. Once done, left-click on the its icon in the nav bar and open the MySQL console as shown in the following picture.
+
+![MySQL Console](images/wamp-mysql-console.jpg)
+
+Enter `root` as username and press enter when asked for a password (default root user has no password by default).
+
+Create a new database and a new user:
+
+```bash
+mysql> CREATE DATABASE crossout_market;
+mysql> CREATE USER 'crossout'@'localhost' IDENTIFIED BY 'crossout';
+mysql> GRANT ALL PRIVILEGES ON crossout_market.* TO 'crossout'@'localhost';
+mysql> FLUSH PRIVILEGES;
+```
+
+Fork and clone this repository. You will need to import the database schema and data from the file `/Schema/crossout_structure_and_data_no_market.sql`.
+
+Option 1: run the following commands from the MySQL console
+
+```bash
+mysql> USE crossout_market;
+mysql> SOURCE {absolute path to the .sql file};
+```
+
+Option 2:
+
+* Open `phpMyAdmin` at <http://localhost/phpmyadmin/index.php>
+* Login with username=crossout and password=crossout
+* Click on the database `crossout_market`
+* Go to `Import` and select the `.sql` file
+
+## Setup the IDE
+
+Install and run Visual Studio.
+
+Create the settings file in `%appdata%/CrossoutWeb/WebSettings.json` or start the project file at `Crossout.AspWeb\Crossout.AspWeb.csproj` once since this will automatically create the file. The file should look like this:
 
 ```json
 {
@@ -70,6 +107,16 @@ Then create the settings file in %appdata%/CrossoutWeb/WebSettings.json or start
   "FileContributors": "Resources\\Info\\contributors.json",
   "FileUpdateNotes": "Resources\\Info\\updates.json"
 }
+```
+
+Replace the database configuration with the correct ones. If you followed the previous steps, replace the configuration with:
+
+```json
+  "DatabaseName": "crossout_market",
+  "DatabaseHost": "localhost",
+  "DatabasePassword": "crossout",
+  "DatabaseUsername": "crossout",
+  "DatabasePort": 3306,
 ```
 
 CrossoutDB API
