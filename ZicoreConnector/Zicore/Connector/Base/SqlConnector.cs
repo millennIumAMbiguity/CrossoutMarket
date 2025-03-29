@@ -165,7 +165,7 @@ namespace ZicoreConnector.Zicore.Connector.Base
         {
             if (ConnectionType == ConnectionType.MySql)
             {
-                var mysqlCommand = (MySqlCommand) cmd;
+                var mysqlCommand = (MySqlCommand)cmd;
                 return mysqlCommand.LastInsertedId;
             }
             return 0;
@@ -336,25 +336,24 @@ namespace ZicoreConnector.Zicore.Connector.Base
             return result;
         }
 
-        public List<Object[]> SelectDataSet(String query, List<Parameter> parameter = null)
+        public List<Object[]> SelectDataSet(String query, List<Parameter> parameters = null)
         {
             DbConnection connection = CreateConnection();
-            
+
             try
             {
                 connection.Open();
                 DbCommand command = connection.CreateCommand();
-                
+
                 String sql = query;
                 command.CommandText = sql;
-                if (parameter != null)
+                if (parameters != null)
                 {
-                    command.Prepare();
-                    foreach (var p in parameter)
+                    foreach (var p in parameters)
                     {
                         if (command is MySqlCommand)
                         {
-                            var cmd = (MySqlCommand) command;
+                            var cmd = (MySqlCommand)command;
                             cmd.Parameters.AddWithValue(p.Identifier, p.Value);
                         }
                         else
@@ -363,6 +362,7 @@ namespace ZicoreConnector.Zicore.Connector.Base
                         }
                     }
                 }
+                command.Prepare();
                 var reader = command.ExecuteReader();
                 List<Object[]> data = new List<Object[]>();
                 int i = 0;
