@@ -82,9 +82,9 @@
       <Project>{831d83a0-7348-4d8c-9857-7b336f7d91ea}</Project>
       <Name>Zicore.Settings.Json</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ZicoreConnector\ZicoreConnector.csproj">
+    <ProjectReference Include="..\Zicore.Connector\Zicore.Connector.csproj">
       <Project>{c0b5a170-e453-4f2c-8532-e0bef831e586}</Project>
-      <Name>ZicoreConnector</Name>
+      <Name>Zicore.Connector</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

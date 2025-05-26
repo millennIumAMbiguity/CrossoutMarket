@@ -785,13 +785,13 @@
     <ProjectReference Include="..\Crossout.Images\Crossout.Images.csproj" />
     <ProjectReference Include="..\Crossout.Model\Crossout.Model.csproj" />
     <ProjectReference Include="..\Zicore.Settings.Json\Zicore.Settings.Json.csproj" />
-    <ProjectReference Include="..\ZicoreConnector\ZicoreConnector.csproj" />
+    <ProjectReference Include="..\Zicore.Connector\Zicore.Connector.csproj" />
   </ItemGroup>
 
 
   <ItemGroup>
     <Reference Include="MySql.Data">
-      <HintPath>..\ZicoreConnector\Connector\MySql.Data.dll</HintPath>
+      <HintPath>..\Zicore.Connector\Connector\MySql.Data.dll</HintPath>
       <Private>true</Private>
     </Reference>
   </ItemGroup>

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ZicoreConnector.Zicore.Connector.Base
+namespace Zicore.Connector.Base
 {
     public class QueryListResult : QueryResult
     {

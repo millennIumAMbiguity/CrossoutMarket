@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Zicore.Settings.Json\Zicore.Settings.Json.csproj" />
-    <ProjectReference Include="..\ZicoreConnector\ZicoreConnector.csproj" />
+    <ProjectReference Include="..\Zicore.Connector\Zicore.Connector.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ZicoreConnector.Zicore.Connector.Base
+namespace Zicore.Connector.Base
 {
     public class SqlString
     {

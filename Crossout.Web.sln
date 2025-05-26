@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crossout.Model", "Crossout.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zicore.Settings.Json", "Zicore.Settings.Json\Zicore.Settings.Json.csproj", "{831D83A0-7348-4D8C-9857-7B336F7D91EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZicoreConnector", "ZicoreConnector\ZicoreConnector.csproj", "{C0B5A170-E453-4F2C-8532-E0BEF831E586}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zicore.Connector", "Zicore.Connector\Zicore.Connector.csproj", "{C0B5A170-E453-4F2C-8532-E0BEF831E586}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crossout.Images", "Crossout.Images\Crossout.Images.csproj", "{0EA0EE6A-898E-4DE1-BB30-355073A5DFD7}"
 EndProject
