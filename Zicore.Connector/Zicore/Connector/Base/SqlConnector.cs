@@ -7,9 +7,9 @@ using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
 using MySql.Data.MySqlClient;
-using ZicoreConnector.Zicore.Connector.Extensions;
+using Zicore.Connector.Extensions;
 
-namespace ZicoreConnector.Zicore.Connector.Base
+namespace Zicore.Connector.Base
 {
     public enum ConnectionType
     {

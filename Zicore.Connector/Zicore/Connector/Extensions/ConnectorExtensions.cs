@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data.Common;
 
-namespace ZicoreConnector.Zicore.Connector.Extensions
+namespace Zicore.Connector.Extensions
 {
     public static class ConnectorExtensions
     {

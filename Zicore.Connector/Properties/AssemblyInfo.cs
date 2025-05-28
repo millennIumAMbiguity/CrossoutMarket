@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Allgemeine Informationen über eine Assembly werden über die folgenden 
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die mit einer Assembly verknüpft sind.
-[assembly: AssemblyTitle("ZicoreConnector")]
+[assembly: AssemblyTitle("Zicore.Connector")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Zicore")]
-[assembly: AssemblyProduct("ZicoreConnector")]
+[assembly: AssemblyProduct("Zicore.Connector")]
 [assembly: AssemblyCopyright("Copyright © Zicore 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
